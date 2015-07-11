@@ -20,7 +20,7 @@ public class KafkaConsumer extends Thread{
     public KafkaConsumer()
     {
     	Properties properties = new Properties();
-        properties.put("zookeeper.connect","172.20.11.198:2181");
+        properties.put("zookeeper.connect","localhost:2181");
         properties.put("group.id","test-group");
         ConsumerConfig consumerConfig = new ConsumerConfig(properties);
         consumerConnector = Consumer.createJavaConsumerConnector(consumerConfig);
