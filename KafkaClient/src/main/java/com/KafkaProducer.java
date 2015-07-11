@@ -19,7 +19,7 @@ public class KafkaProducer extends Thread{
 	{
 		this.TOPIC=topic;
 		Properties properties=new Properties();
-		properties.put("metadata.broker.list", "172.20.11.198:9092");
+		properties.put("metadata.broker.list", "localhost:9092");
 		properties.put("serializer.class", "kafka.serializer.StringEncoder");
 		ProducerConfig producerConfig=new ProducerConfig(properties);
 		producer=new kafka.javaapi.producer.Producer<String, String>(producerConfig);
